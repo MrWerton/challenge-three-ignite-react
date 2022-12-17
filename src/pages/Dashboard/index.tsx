@@ -4,17 +4,9 @@ import Food from '../../components/Food';
 import Header from '../../components/Header';
 import ModalAddFood from '../../components/ModalAddFood';
 import ModalEditFood from '../../components/ModalEditFood';
+import { IFood } from '../../interfaces/food';
 import api from '../../services/api';
 import { FoodsContainer } from './styles';
-
-interface IFood {
-  id: number;
-  name: string;
-  description: string;
-  price: string;
-  available: boolean;
-  image: string;
-}
 
 const Dashboard = () => {
   const [foods, setFoods] = useState<IFood[]>([])
